@@ -124,7 +124,6 @@
 
         .profile h1 {
             font-size: 3.15rem;
-            /* Increased by 10% from 2.875rem */
             margin-bottom: 0.5rem;
             letter-spacing: 2px;
         }
@@ -145,7 +144,6 @@
             display: flex;
             align-items: center;
             padding: 1.27rem 1.92rem;
-            /* Increased padding by 10% */
             border-radius: 12px;
             text-decoration: none;
             font-weight: 500;
@@ -160,21 +158,15 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Increased size of icons by 10% */
         .social-link i {
             font-size: 1.90rem;
-            /* Increased by 10% from 1.725rem */
             margin-right: 1.27rem;
-            /* Increased by 10% */
             width: 26.4px;
-            /* Increased by 10% */
             text-align: center;
         }
 
-        /* Increased size of text by 10% */
         .social-link span {
             font-size: 1.27rem;
-            /* Increased by 10% from 1.15rem */
         }
 
         .social-link img {
@@ -185,10 +177,8 @@
         /* Add share icon */
         .share-icon {
             font-size: 1.21rem;
-            /* Increased by 10% */
             margin-left: auto;
             color: rgba(255, 255, 255, 0.5);
-            /* Dim white */
             transition: transform 0.3s, color 0.3s;
         }
 
@@ -200,6 +190,34 @@
         .share-icon:hover {
             animation: none;
         }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            padding: 1.27rem 1.92rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .social-link i {
+            font-size: 1.90rem;
+            margin-right: 1.5rem;
+            /* Increased to provide equal spacing */
+            width: 26.4px;
+            text-align: center;
+        }
+
+        .social-link span {
+            font-size: 1.27rem;
+            margin-left: 1.5rem;
+            /* Add margin on the left side of the text */
+        }
+
 
         @keyframes bounce {
 
@@ -276,9 +294,7 @@
 
         .profile h1:hover {
             transform: scale(1.1);
-            /* Zooms in by 10% */
             color: grey;
-            /* Optional: Change color on hover */
         }
 
         @media (max-width: 600px) {
@@ -288,17 +304,14 @@
 
             .profile h1 {
                 font-size: 2.53rem;
-                /* Increased by 10% from 2.3rem */
             }
 
             .social-link {
                 padding: 1.1rem 1.27rem;
-                /* Increased by 10% */
             }
 
             .social-link i {
                 font-size: 1.52rem;
-                /* Increased by 10% */
             }
         }
 
@@ -337,9 +350,8 @@
                 <i class="fas fa-share share-icon"></i>
             </div>
 
-            <div class="social-link x" onclick="window.location.href='https://www.x.com/username'"
-                style="background-color: black;">
-                <img src="x.png" alt="X" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+            <div class="social-link x" onclick="window.location.href='https://www.x.com/username'">
+                <img src="x.png">
                 <span>X (Twitter)</span>
                 <i class="fas fa-share share-icon"></i>
             </div>
@@ -351,7 +363,7 @@
             </div>
 
             <div class="social-link snapchat" onclick="window.location.href='https://www.snapchat.com/add/username'">
-                <i class="fab fa-snapchat" style="color: black;"></i>
+                <i class="fab fa-snapchat"></i>
                 <span>Snapchat</span>
                 <i class="fas fa-share share-icon"></i>
             </div>
@@ -363,7 +375,7 @@
             </div>
 
             <div class="social-link reddit" onclick="window.location.href='https://www.reddit.com/user/username'">
-                <i class="fab fa-reddit" style="color: black;"></i>
+                <i class="fab fa-reddit"></i>
                 <span>Reddit</span>
                 <i class="fas fa-share share-icon"></i>
             </div>
@@ -381,26 +393,26 @@
             </div>
 
             <div class="social-link hackerrank" onclick="window.location.href='https://www.hackerrank.com/username'">
-                <img src="hr.png" alt="HackerRank" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <img src="hr.png">
                 <span>HackerRank</span>
                 <i class="fas fa-share share-icon"></i>
             </div>
 
             <div class="social-link leetcode" onclick="window.location.href='https://www.leetcode.com/username'">
-                <img src="lc.png" alt="LeetCode" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <img src="lc.png">
                 <span>LeetCode</span>
                 <i class="fas fa-share share-icon"></i>
             </div>
 
             <div class="social-link geeksforgeeks"
                 onclick="window.location.href='https://www.geeksforgeeks.org/username'">
-                <img src="gfg.png" alt="GeeksForGeeks" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <img src="gfg.png">
                 <span>GeeksForGeeks</span>
                 <i class="fas fa-share share-icon"></i>
             </div>
 
             <div class="social-link codechef" onclick="window.location.href='https://www.codechef.com/users/username'">
-                <img src="cc.png" alt="CodeChef" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <img src="cc.png">
                 <span>CodeChef</span>
                 <i class="fas fa-share share-icon"></i>
             </div>
@@ -411,7 +423,6 @@
                 <i class="fas fa-share share-icon"></i>
             </div>
 
-            <!-- New Email Button with Rainbow Color -->
             <div class="social-link email" onclick="window.location.href='mailto:work.pratikabhang@gmail.com'">
                 <i class="fas fa-envelope"></i>
                 <span>Email</span>
