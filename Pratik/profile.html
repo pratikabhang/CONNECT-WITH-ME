@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Abhang - Social Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --light-bg: #f0f2f5;
+            --dark-bg: #18191a;
+            --light-text: #1c1e21;
+            --dark-text: #ffffff;
+            --snapchat-color: #fffc00;
+            --snapchat-text-light: #666666;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--light-text);
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Specific background color for each social media platform */
+        .instagram {
+            background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
+            color: white;
+        }
+
+        .linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .github {
+            background: #24292e;
+            color: white;
+        }
+
+        .x {
+            background: #000000;
+            color: white;
+        }
+
+        .youtube {
+            background: #ff0000;
+            color: white;
+        }
+
+        .snapchat {
+            background: #FFFF00;
+            color: black;
+        }
+
+        .pinterest {
+            background: #e60023;
+            color: white;
+        }
+
+        .reddit {
+            background: #ff4500;
+            color: black;
+        }
+
+        .behance {
+            background: #1769ff;
+            color: white;
+        }
+
+        .skype {
+            background: #00aff0;
+            color: white;
+        }
+
+        .hackerrank {
+            background: #2ec866;
+            color: black;
+        }
+
+        .leetcode {
+            background: #f89f1b;
+            color: black;
+        }
+
+        .geeksforgeeks {
+            background: #2f8d46;
+            color: white;
+        }
+
+        .codechef {
+            background: #5b4638;
+            color: beige;
+        }
+
+        .portfolio {
+            background: #333333;
+            color: white;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .profile h1 {
+            font-size: 3.15rem; /* Increased by 10% from 2.875rem */
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .profile p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.15rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            padding: 1.27rem 1.92rem; /* Increased padding by 10% */
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Increased size of icons by 10% */
+        .social-link i {
+            font-size: 1.90rem; /* Increased by 10% from 1.725rem */
+            margin-right: 1.27rem; /* Increased by 10% */
+            width: 26.4px; /* Increased by 10% */
+            text-align: center;
+        }
+
+        /* Increased size of text by 10% */
+        .social-link span {
+            font-size: 1.27rem; /* Increased by 10% from 1.15rem */
+        }
+
+        .social-link img {
+            width: calc(26.4px * 1.15);
+            height: calc(26.4px * 1.15);
+        }
+
+        /* Add share icon */
+        .share-icon {
+            font-size: 1.21rem; /* Increased by 10% */
+            margin-left: auto;
+            color: rgba(255, 255, 255, 0.5); /* Dim white */
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-link:hover .share-icon {
+            transform: translateX(5px);
+            color: white;
+        }
+
+        .share-icon:hover {
+            animation: bounce 0.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .button-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: auto;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease-in-out, background 0.3s ease;
+        }
+
+        .action-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .action-btn:active {
+            transform: scale(1.05);
+        }
+
+        .action-btn:not(:hover) {
+            transform: scale(1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .profile h1 {
+                font-size: 2.53rem; /* Increased by 10% from 2.3rem */
+            }
+
+            .social-link {
+                padding: 1.1rem 1.27rem; /* Increased by 10% */
+            }
+
+            .social-link i {
+                font-size: 1.52rem; /* Increased by 10% */
+            }
+        }
+
+        /* Rainbow background for email */
+        .social-link.email {
+            background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile">
+            <h1>PRATIK ABHANG</h1>
+            <p>Connect with me on these platforms</p>
+        </div>
+
+        <div class="links">
+            <!-- Each social link with an icon and share button -->
+            <div class="social-link instagram" onclick="window.location.href='https://www.instagram.com/username'">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link linkedin" onclick="window.location.href='https://www.linkedin.com/in/username'">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link github" onclick="window.location.href='https://www.github.com/username'">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link x" onclick="window.location.href='https://www.x.com/username'" style="background-color: black;">
+                <img src="x.png" alt="X" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <span>X (Twitter)</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link youtube" onclick="window.location.href='https://www.youtube.com/c/username'">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link snapchat" onclick="window.location.href='https://www.snapchat.com/add/username'">
+                <i class="fab fa-snapchat" style="color: black;"></i>
+                <span>Snapchat</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link pinterest" onclick="window.location.href='https://www.pinterest.com/username'">
+                <i class="fab fa-pinterest"></i>
+                <span>Pinterest</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link reddit" onclick="window.location.href='https://www.reddit.com/user/username'">
+                <i class="fab fa-reddit" style="color: black;"></i>
+                <span>Reddit</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link behance" onclick="window.location.href='https://www.behance.net/username'">
+                <i class="fab fa-behance"></i>
+                <span>Behance</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link skype" onclick="window.location.href='https://www.skype.com/en/username'">
+                <i class="fab fa-skype"></i>
+                <span>Skype</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link hackerrank" onclick="window.location.href='https://www.hackerrank.com/username'">
+                <img src="hr.png" alt="HackerRank" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <span>HackerRank</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link leetcode" onclick="window.location.href='https://www.leetcode.com/username'">
+                <img src="lc.png" alt="LeetCode" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <span>LeetCode</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link geeksforgeeks" onclick="window.location.href='https://www.geeksforgeeks.org/username'">
+                <img src="gfg.png" alt="GeeksForGeeks" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <span>GeeksForGeeks</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link codechef" onclick="window.location.href='https://www.codechef.com/users/username'">
+                <img src="cc.png" alt="CodeChef" style="width: 26.4px; height: 26.4px; margin-right: 1.27rem;">
+                <span>CodeChef</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <div class="social-link portfolio" onclick="window.location.href='https://www.portfolio.com/username'">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+
+            <!-- New Email Button with Rainbow Color -->
+            <div class="social-link email" onclick="window.location.href='mailto:work.pratikabhang@gmail.com'">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+                <i class="fas fa-share share-icon"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
