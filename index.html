@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <script>
+        function openAndCopy(url) {
+            // Open the URL in a new tab
+            window.open(url, '_blank');
+            
+            // Copy the URL to clipboard
+            navigator.clipboard.writeText(url).then(function() {
+                console.log('URL copied to clipboard');
+            }).catch(function(err) {
+                console.error('Failed to copy the URL: ', err);
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -19,105 +32,100 @@
         </div>
 
         <div class="links">
-            <div class="social-link instagram" onclick="window.location.href='https://www.instagram.com/pratiksabhang'">
+            <div class="social-link instagram" onclick="window.open('https://www.instagram.com/pratiksabhang', '_blank')">
                 <i class="fab fa-instagram"></i>
                 <span>Instagram</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.instagram.com/pratiksabhang')"></i>
             </div>
 
-            <div class="social-link x" onclick="window.location.href='https://twitter.com/pratiksabhang'">
+            <div class="social-link x" onclick="window.open('https://twitter.com/pratiksabhang', '_blank')">
                 <i class="fab fa-x-twitter"></i>
                 <span>X (Twitter)</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://twitter.com/pratiksabhang')"></i>
             </div>
 
-            <div class="social-link linkedin" onclick="window.location.href='https://www.linkedin.com/in/pratikabhang'">
+            <div class="social-link linkedin" onclick="window.open('https://www.linkedin.com/in/pratikabhang', '_blank')">
                 <i class="fab fa-linkedin"></i>
                 <span>LinkedIn</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.linkedin.com/in/pratikabhang')"></i>
             </div>
 
-            <div class="social-link github" onclick="window.location.href='https://www.github.com/pratikabhang'">
+            <div class="social-link github" onclick="window.open('https://www.github.com/pratikabhang', '_blank')">
                 <i class="fab fa-github"></i>
                 <span>GitHub</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.github.com/pratikabhang')"></i>
             </div>
 
-            <div class="social-link youtube" onclick="window.location.href='https://www.youtube.com/c/pratikabhang'">
+            <div class="social-link youtube" onclick="window.open('https://www.youtube.com/c/pratikabhang', '_blank')">
                 <i class="fab fa-youtube"></i>
                 <span>YouTube</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.youtube.com/c/pratikabhang')"></i>
             </div>
 
-            <div class="social-link snapchat"
-                onclick="window.location.href='https://www.snapchat.com/add/pratiksabhang'">
+            <div class="social-link snapchat" onclick="window.open('https://www.snapchat.com/add/pratiksabhang', '_blank')">
                 <i class="fab fa-snapchat"></i>
                 <span>Snapchat</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.snapchat.com/add/pratiksabhang')"></i>
             </div>
-            <div class="social-link reddit" onclick="window.location.href='https://www.reddit.com/user/pratikabhang'">
+            
+            <div class="social-link reddit" onclick="window.open('https://www.reddit.com/user/pratikabhang', '_blank')">
                 <i class="fab fa-reddit"></i>
                 <span>Reddit</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.reddit.com/user/pratikabhang')"></i>
             </div>
 
-            <div class="social-link pinterest" onclick="window.location.href='https://www.pinterest.com/pratiksabhang'">
+            <div class="social-link pinterest" onclick="window.open('https://www.pinterest.com/pratiksabhang', '_blank')">
                 <i class="fab fa-pinterest"></i>
                 <span>Pinterest</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.pinterest.com/pratiksabhang')"></i>
             </div>
 
-
-            <div class="social-link behance" onclick="window.location.href='https://www.behance.net/pratikabhang'">
+            <div class="social-link behance" onclick="window.open('https://www.behance.net/pratikabhang', '_blank')">
                 <i class="fab fa-behance"></i>
                 <span>Behance</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.behance.net/pratikabhang')"></i>
             </div>
 
-            <div class="social-link skype" onclick="window.location.href='https://www.skype.com/en/pratikabhang'">
+            <div class="social-link skype" onclick="window.open('https://www.skype.com/en/pratikabhang', '_blank')">
                 <i class="fab fa-skype"></i>
                 <span>Skype</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.skype.com/en/pratikabhang')"></i>
             </div>
 
-            <div class="social-link hackerrank"
-                onclick="window.location.href='https://www.hackerrank.com/pratikabhang'">
+            <div class="social-link hackerrank" onclick="window.open('https://www.hackerrank.com/pratikabhang', '_blank')">
                 <i class="fab fa-hackerrank"></i>
                 <span>HackerRank</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.hackerrank.com/pratikabhang')"></i>
             </div>
 
-            <div class="social-link leetcode" onclick="window.location.href='https://leetcode.com/pratikabhang'">
+            <div class="social-link leetcode" onclick="window.open('https://leetcode.com/pratikabhang', '_blank')">
                 <i class="fa-solid fa-terminal"></i>
                 <span>LeetCode</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://leetcode.com/pratikabhang')"></i>
             </div>
 
-            <div class="social-link codechef"
-                onclick="window.location.href='https://www.codechef.com/users/pratikabhang'">
+            <div class="social-link codechef" onclick="window.open('https://www.codechef.com/users/pratikabhang', '_blank')">
                 <i class="fa-solid fa-code"></i>
                 <span>CodeChef</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.codechef.com/users/pratikabhang')"></i>
             </div>
 
-            <div class="social-link geeksforgeeks"
-                onclick="window.location.href='https://www.geeksforgeeks.org/pratikabhang'">
+            <div class="social-link geeksforgeeks" onclick="window.open('https://www.geeksforgeeks.org/pratikabhang', '_blank')">
                 <i class="fa-solid fa-laptop-code"></i>
                 <span>GeeksForGeeks</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.geeksforgeeks.org/pratikabhang')"></i>
             </div>
 
-            <div class="social-link portfolio"
-                onclick="window.location.href='https://www.pratiksunilabhang.netlify.app'">
+            <div class="social-link portfolio" onclick="window.open('https://www.pratiksunilabhang.netlify.app', '_blank')">
                 <i class="fas fa-briefcase"></i>
                 <span>Portfolio</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('https://www.pratiksunilabhang.netlify.app')"></i>
             </div>
 
-            <div class="social-link email" onclick="window.location.href='mailto:work.pratikabhang@gmail.com'">
+            <div class="social-link email" onclick="window.open('mailto:work.pratikabhang@gmail.com', '_blank')">
                 <i class="fas fa-envelope"></i>
                 <span>Email</span>
-                <i class="fa-solid fa-handshake share-icon"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="openAndCopy('mailto:work.pratikabhang@gmail.com')"></i>
             </div>
         </div>
     </div>
