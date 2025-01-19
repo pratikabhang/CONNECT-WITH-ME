@@ -79,7 +79,13 @@ body {
     font-size: 1.6rem;
     flex: 1;
     text-align: center;
+    transition: transform 0.3s ease; /* Add transition for scaling */
+    
 }
+.social-link:hover span {
+    transform: scale(1.1); /* Scale the text slightly on hover */
+}
+
 
 .social-link .share-icon {
     font-size: 1.8rem;
