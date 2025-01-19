@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --light-bg: #f5f5f5;
+    --dark-bg: #18191a;
+    --light-text: #1c1e21;
+    --dark-text: #ffffff;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.profile h1 {
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 1.27rem 1.92rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-link i {
+    font-size: 2.4rem;
+    margin-right: 1.27rem;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #bc1888, #f09433);
+    color: white;
+}
+
+.social-link.linkedin {
+    background: #0077b5;
+    color: white;
+}
+
+.social-link.github {
+    background: #24292e;
+    color: white;
+}
+
+.social-link.x {
+    background: #000000;
+    color: white;
+}
+
+.social-link.youtube {
+    background: #ff0000;
+    color: white;
+}
+
+.social-link.email {
+    background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .profile h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-link {
+        padding: 1.1rem 1.27rem;
+    }
+}
