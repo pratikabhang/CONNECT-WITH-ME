@@ -1,2 +1,2 @@
-// Add functionality or interactivity as needed.
-console.log("Script loaded successfully!");
+// Add your interactivity here if needed
+console.log("Website loaded successfully!");

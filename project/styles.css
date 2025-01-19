@@ -1,3 +1,4 @@
+/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +16,12 @@
 body {
     background-color: var(--light-bg);
     color: var(--light-text);
+    transition: background-color 0.3s, color 0.3s;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -29,6 +30,7 @@ body {
     padding: 20px;
 }
 
+/* Profile Section */
 .profile {
     text-align: center;
     margin-bottom: 2rem;
@@ -38,14 +40,22 @@ body {
 .profile h1 {
     font-size: 3.2rem;
     margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    position: relative;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.profile p {
-    color: #666;
-    margin-bottom: 2rem;
+.profile h1:hover {
+    transform: scale(1.1);
+    color: rgb(69, 69, 69);
 }
 
+.profile p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+}
+
+/* Links Section */
 .links {
     display: flex;
     flex-direction: column;
@@ -57,10 +67,8 @@ body {
     align-items: center;
     padding: 1.27rem 1.92rem;
     border-radius: 12px;
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
 .social-link i {
@@ -68,15 +76,27 @@ body {
     margin-right: 1.27rem;
 }
 
+.social-link span {
+    font-size: 1.2rem;
+    flex: 1;
+    text-align: left;
+}
+
+.social-link .share-icon {
+    font-size: 1.8rem;
+}
+
 .social-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Social link colors */
 .social-link.instagram {
-    background: linear-gradient(45deg, #bc1888, #f09433);
+    background: linear-gradient(45deg, #ff0099, #ff4f70, #ff7847, #ffa726, #ffd800);
     color: white;
 }
+
 
 .social-link.linkedin {
     background: #0077b5;
@@ -84,12 +104,12 @@ body {
 }
 
 .social-link.github {
-    background: #24292e;
+    background: #333333;
     color: white;
 }
 
 .social-link.x {
-    background: #000000;
+    background: #000;
     color: white;
 }
 
@@ -98,28 +118,107 @@ body {
     color: white;
 }
 
-.social-link.email {
-    background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+.social-link.snapchat {
+    background: #fffc00;
+    color: black;
+}
+
+.social-link.pinterest {
+    background: #e60023;
     color: white;
 }
 
+.social-link.reddit {
+    background: #ff4500;
+    color: white;
+}
+
+.social-link.behance {
+    background: #1769ff;
+    color: white;
+}
+
+.social-link.skype {
+    background: #00aff0;
+    color: white;
+}
+
+.social-link.hackerrank {
+    background: #2ec866;
+    color: black;
+}
+
+.social-link.leetcode {
+    background: #f89f1b;
+    color: black;
+}
+
+.social-link.codechef {
+    background: #5b4638;
+    color: white;
+}
+
+.social-link.geeksforgeeks {
+    background: #0f9d58;
+    color: white;
+}
+
+.social-link.portfolio {
+    background: #1c1e21;
+    color: white;
+}
+
+.social-link.email {
+    background: linear-gradient(45deg, red, blue, yellow, red);
+    color: white;
+}
+
+
+/* Hover effects */
+.social-link:hover .share-icon {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* Animations */
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(-20px);
     }
-    to {
+
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@media (max-width: 600px) {
-    .profile h1 {
-        font-size: 2.5rem;
-    }
+.social-link i,
+.social-link img {
+    font-size: 2.4rem;
+    margin-right: 1.27rem;
+    width: 31.7px;
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
+}
 
-    .social-link {
-        padding: 1.1rem 1.27rem;
-    }
+.social-link:hover i,
+.social-link:hover img {
+    transform: scale(1.2);
+    /* Slightly zoom in on hover */
 }
