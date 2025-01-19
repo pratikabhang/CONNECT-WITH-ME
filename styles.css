@@ -101,12 +101,12 @@ body {
 }
 
 .social-link.linkedin {
-    background: #0077b5;
+    background: #008dd8;
     color: white;
 }
 
 .social-link.github {
-    background: #333333;
+    background: #212121;
     color: white;
 }
 
@@ -146,7 +146,7 @@ body {
 }
 
 .social-link.hackerrank {
-    background: #159142;
+    background: #149e47;
     color: black;
 }
 
