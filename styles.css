@@ -62,34 +62,43 @@ body {
 .social-link {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1.27rem 1.92rem;
     border-radius: 12px;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
     text-align: center;
+    background-color: #e0e0e0;
 }
 
 .social-link i {
     font-size: 2.4rem;
     margin-right: 1.27rem;
+    flex-shrink: 0;
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
 }
 
 .social-link span {
     font-size: 1.5rem;
-    flex: 1;
+    flex-grow: 1;
     text-align: center;
     transition: transform 0.3s ease;
 }
 
-
 .social-link .share-icon {
     font-size: 1.8rem;
+    flex-shrink: 0;
 }
 
 .social-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-link:hover i,
+.social-link:hover img {
+    transform: scale(1.2);
 }
 
 .social-link.instagram {
@@ -132,16 +141,6 @@ body {
     color: white;
 }
 
-.social-link.behance {
-    background: #1769ff;
-    color: white;
-}
-
-.social-link.skype {
-    background: #00aff0;
-    color: white;
-}
-
 .social-link.hackerrank {
     background: #149e47;
     color: black;
@@ -154,11 +153,6 @@ body {
 
 .social-link.codechef {
     background: #5b4638;
-    color: white;
-}
-
-.social-link.geeksforgeeks {
-    background: #0f9d58;
     color: white;
 }
 
@@ -197,18 +191,4 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.social-link i,
-.social-link img {
-    font-size: 2.4rem;
-    margin-right: 1.27rem;
-    width: 31.7px;
-    text-align: center;
-    transition: transform 0.4s ease-in-out;
-}
-
-.social-link:hover i,
-.social-link:hover img {
-    transform: scale(1.2);
 }
