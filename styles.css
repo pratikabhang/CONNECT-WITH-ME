@@ -82,9 +82,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-.social-link:hover span {
-    transform: scale(1.1);
-}
 
 .social-link .share-icon {
     font-size: 1.8rem;
