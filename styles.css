@@ -86,10 +86,16 @@ body {
     transition: transform 0.3s ease;
 }
 
-.social-link .share-icon {
-    font-size: 2rem;
+.social-link {
+    font-size: 2rem;  
     flex-shrink: 0;
 }
+
+.share-icon {
+    font-size: 1rem;  
+    flex-shrink: 0;
+}
+
 
 .social-link:hover {
     transform: translateY(-3px);
@@ -167,7 +173,7 @@ body {
 }
 
 .social-link:hover .share-icon {
-    animation: shake 1s ease-in-out infinite;
+    animation: shake 1.2s ease-in-out infinite;
 }
 
 @keyframes shake {
