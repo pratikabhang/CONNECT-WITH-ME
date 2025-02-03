@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable">
     <title>Pratik Abhang</title>
-    <link rel="icon" href="icon.png" type="icon">
+    <link rel="icon" href="icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <script>
-        function openAndCopy(url) {
+        function openUrl(url) {
             window.open(url, '_blank');
-            navigator.clipboard.writeText(url).then(function () {
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
                 console.log('URL copied to clipboard');
             }).catch(function (err) {
                 console.error('Failed to copy the URL: ', err);
@@ -29,87 +32,70 @@
         </div>
 
         <div class="links">
-            <div class="social-link instagram"
-                onclick="window.open('https://www.instagram.com/pratikabhang1', '_blank')">
+            <div class="social-link instagram" onclick="openUrl('https://www.instagram.com/pratikabhang1')">
                 <i class="fab fa-instagram"></i>
                 <span>Instagram</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://www.instagram.com/pratikabhang1')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.instagram.com/pratikabhang1')"></i>
             </div>
 
-            <div class="social-link x" onclick="window.open('https://twitter.com/pratikabhang11', '_blank')">
+            <div class="social-link x" onclick="openUrl('https://twitter.com/pratikabhang11')">
                 <i class="fab fa-x-twitter"></i>
                 <span>X (Twitter)</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://twitter.com/pratikabhang11')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://twitter.com/pratikabhang11')"></i>
             </div>
 
-            <div class="social-link linkedin"
-                onclick="window.open('https://www.linkedin.com/in/pratikabhang', '_blank')">
+            <div class="social-link linkedin" onclick="openUrl('https://www.linkedin.com/in/pratikabhang')">
                 <i class="fab fa-linkedin"></i>
                 <span>LinkedIn</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://www.linkedin.com/in/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.linkedin.com/in/pratikabhang')"></i>
             </div>
 
-            <div class="social-link github" onclick="window.open('https://www.github.com/pratikabhang', '_blank')">
+            <div class="social-link github" onclick="openUrl('https://www.github.com/pratikabhang')">
                 <i class="fab fa-github"></i>
                 <span>GitHub</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://www.github.com/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.github.com/pratikabhang')"></i>
             </div>
 
-            <div class="social-link snapchat"
-                onclick="window.open('https://www.snapchat.com/add/pratiksabhang', '_blank')">
+            <div class="social-link snapchat" onclick="openUrl('https://www.snapchat.com/add/pratiksabhang')">
                 <i class="fab fa-snapchat"></i>
                 <span>Snapchat</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://www.snapchat.com/add/pratiksabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.snapchat.com/add/pratiksabhang')"></i>
             </div>
 
-            <div class="social-link youtube" onclick="window.open('https://www.youtube.com/@pratikabhang', '_blank')">
+            <div class="social-link youtube" onclick="openUrl('https://www.youtube.com/@pratikabhang')">
                 <i class="fab fa-youtube"></i>
                 <span>YouTube</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://www.youtube.com/@pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.youtube.com/@pratikabhang')"></i>
             </div>
 
-            <div class="social-link hackerrank"
-                onclick="window.open('https://www.hackerrank.com/pratikabhang', '_blank')">
+            <div class="social-link hackerrank" onclick="openUrl('https://www.hackerrank.com/pratikabhang')">
                 <i class="fab fa-hackerrank"></i>
                 <span>HackerRank</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://www.hackerrank.com/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.hackerrank.com/pratikabhang')"></i>
             </div>
 
-            <div class="social-link leetcode" onclick="window.open('https://leetcode.com/pratikabhang', '_blank')">
+            <div class="social-link leetcode" onclick="openUrl('https://leetcode.com/pratikabhang')">
                 <i class="fa-solid fa-terminal"></i>
                 <span>LeetCode</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://leetcode.com/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://leetcode.com/pratikabhang')"></i>
             </div>
 
-            <div class="social-link codechef"
-                onclick="window.open('https://www.codechef.com/users/pratikabhang', '_blank')">
+            <div class="social-link codechef" onclick="openUrl('https://www.codechef.com/users/pratikabhang')">
                 <i class="fa-solid fa-code"></i>
                 <span>CodeChef</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://www.codechef.com/users/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.codechef.com/users/pratikabhang')"></i>
             </div>
 
-            <div class="social-link portfolio"
-                onclick="window.open('https://www.pratiksunilabhang.netlify.app', '_blank')">
+            <div class="social-link portfolio" onclick="openUrl('https://www.pratiksunilabhang.netlify.app')">
                 <i class="fas fa-briefcase"></i>
                 <span>Portfolio</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('https://www.pratiksunilabhang.netlify.app')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.pratiksunilabhang.netlify.app')"></i>
             </div>
 
-            <div class="social-link email" onclick="window.open('mailto:work.pratikabhang@gmail.com', '_blank')">
+            <div class="social-link email" onclick="openUrl('mailto:work.pratikabhang@gmail.com')">
                 <i class="fas fa-envelope"></i>
                 <span>Email</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="openAndCopy('mailto:work.pratikabhang@gmail.com')"></i>
+                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('mailto:work.pratikabhang@gmail.com')"></i>
             </div>
         </div>
     </div>
