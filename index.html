@@ -3,28 +3,70 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Pratik Abhang</title>
     <link rel="icon" href="icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Toast Notification */
+        .toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+
     <script>
+        // Function to open a URL in a new tab
         function openUrl(url) {
             window.open(url, '_blank');
         }
 
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function () {
-                console.log('URL copied to clipboard');
-            }).catch(function (err) {
-                console.error('Failed to copy the URL: ', err);
+        // Function to copy text to clipboard and show a toast message
+        function copyToClipboard(event, text) {
+            event.stopPropagation(); // Prevent parent click event
+
+            navigator.clipboard.writeText(text).then(() => {
+                showToast("Link copied!");
+            }).catch(err => {
+                console.error('Copy failed:', err);
             });
+        }
+
+        // Function to show a toast message
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.classList.add("show");
+
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 2000);
         }
     </script>
 </head>
 
 <body>
+
     <div class="container">
         <div class="profile">
             <h1>PRATIK ABHANG</h1>
@@ -32,73 +74,116 @@
         </div>
 
         <div class="links">
+            <!-- Instagram -->
             <div class="social-link instagram" onclick="openUrl('https://www.instagram.com/pratikabhang1')">
                 <i class="fab fa-instagram"></i>
                 <span>Instagram</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.instagram.com/pratikabhang1')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.instagram.com/pratikabhang1')"></i>
             </div>
 
+            <!-- Twitter -->
             <div class="social-link x" onclick="openUrl('https://twitter.com/pratikabhang11')">
                 <i class="fab fa-x-twitter"></i>
                 <span>X (Twitter)</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://twitter.com/pratikabhang11')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://twitter.com/pratikabhang11')"></i>
             </div>
 
+            <!-- LinkedIn -->
             <div class="social-link linkedin" onclick="openUrl('https://www.linkedin.com/in/pratikabhang')">
                 <i class="fab fa-linkedin"></i>
                 <span>LinkedIn</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.linkedin.com/in/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.linkedin.com/in/pratikabhang')"></i>
             </div>
 
+            <!-- GitHub -->
             <div class="social-link github" onclick="openUrl('https://www.github.com/pratikabhang')">
                 <i class="fab fa-github"></i>
                 <span>GitHub</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.github.com/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.github.com/pratikabhang')"></i>
             </div>
 
+            <!-- Snapchat -->
             <div class="social-link snapchat" onclick="openUrl('https://www.snapchat.com/add/pratiksabhang')">
                 <i class="fab fa-snapchat"></i>
                 <span>Snapchat</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.snapchat.com/add/pratiksabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.snapchat.com/add/pratiksabhang')"></i>
             </div>
 
+            <!-- Reddit -->
+            <div class="social-link reddit" onclick="openUrl('https://reddit.com/pratikabhang')">
+                <i class="fab fa-reddit"></i>
+                <span>Reddit</span>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://reddit.com/pratikabhang')"></i>
+            </div>
+
+            <!-- Pinterest -->
+            <div class="social-link pinterest" onclick="openUrl('https://Pinterest.com/pratikabhang11')">
+                <i class="fab fa-pinterest"></i>
+                <span>Pinterest</span>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://Pinterest.com/pratikabhang11')"></i>
+            </div>
+
+            <!-- YouTube -->
             <div class="social-link youtube" onclick="openUrl('https://www.youtube.com/@pratikabhang')">
                 <i class="fab fa-youtube"></i>
                 <span>YouTube</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.youtube.com/@pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.youtube.com/@pratikabhang')"></i>
             </div>
 
+            <!-- HackerRank -->
             <div class="social-link hackerrank" onclick="openUrl('https://www.hackerrank.com/pratikabhang')">
                 <i class="fab fa-hackerrank"></i>
                 <span>HackerRank</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.hackerrank.com/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.hackerrank.com/pratikabhang')"></i>
             </div>
 
+            <!-- LeetCode -->
             <div class="social-link leetcode" onclick="openUrl('https://leetcode.com/pratikabhang')">
                 <i class="fa-solid fa-terminal"></i>
                 <span>LeetCode</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://leetcode.com/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://leetcode.com/pratikabhang')"></i>
             </div>
 
+            <!-- CodeChef -->
             <div class="social-link codechef" onclick="openUrl('https://www.codechef.com/users/pratikabhang')">
                 <i class="fa-solid fa-code"></i>
                 <span>CodeChef</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.codechef.com/users/pratikabhang')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.codechef.com/users/pratikabhang')"></i>
             </div>
 
+            <!-- Portfolio -->
             <div class="social-link portfolio" onclick="openUrl('https://www.pratiksunilabhang.netlify.app')">
                 <i class="fas fa-briefcase"></i>
                 <span>Portfolio</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('https://www.pratiksunilabhang.netlify.app')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.pratiksunilabhang.netlify.app')"></i>
             </div>
 
+            <!-- Email -->
             <div class="social-link email" onclick="openUrl('mailto:work.pratikabhang@gmail.com')">
                 <i class="fas fa-envelope"></i>
                 <span>Email</span>
-                <i class="fa-solid fa-handshake share-icon" onclick="copyToClipboard('mailto:work.pratikabhang@gmail.com')"></i>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'work.pratikabhang@gmail.com')"></i>
             </div>
+
         </div>
     </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
 </body>
 
 </html>
