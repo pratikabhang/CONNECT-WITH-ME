@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Pratik Abhang</title>
     <!-- Favicon -->
-    <link rel="icon" href="icons.png" type="image/png">
+    <link rel="icon" href="icon.png" type="image/png">
     <!-- CSS files -->
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
@@ -41,47 +41,59 @@
             visibility: visible;
             opacity: 1;
         }
-/* QR Code Container Styles */
-.qr-container {
-    margin-top: 2rem;
-    padding: 1rem;
-    text-align: center;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.qr-container p {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
+        /* QR Code Container Styles */
+        .qr-container {
+            margin: 2rem auto;
+            padding: 1.5rem;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-#qrcode {
-    display: inline-block;  /* Changed to inline-block for better centering in text-align:center */
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-}
+        .qr-container p {
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
 
-.qr-container button {
-    margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    background-color: burlywood;
-    color: black;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
+        #qrcode {
+            display: inline-block;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
 
-.qr-container button:hover {
-    background-color: skyblue;
-}
+        .qr-container button {
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background-color: wheat;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
+        .qr-container button:hover {
+            background-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .qr-container button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
     </style>
 
     <script>
@@ -114,22 +126,21 @@
         }
 
         function copyLink() {
-        const link = "https://pratikabhang.netlify.app/";
-        navigator.clipboard.writeText(link).then(() => {
-            alert("Link copied to clipboard!");
-        }, () => {
-            alert("Failed to copy the link.");
-        });
+            const link = "https://pratikabhang.netlify.app/";
+            navigator.clipboard.writeText(link).then(() => {
+                showToast("Portfolio link copied to clipboard!");
+            }, () => {
+                showToast("Failed to copy the link");
+            });
         }
 
-        
         // Generate QR code when page loads
         window.onload = function() {
             // Create QR code for the portfolio link
             new QRCode(document.getElementById("qrcode"), {
                 text: "https://pratikabhang.netlify.app/",
-                width: 150,
-                height: 150,
+                width: 160,
+                height: 160,
                 colorDark: "#000000",
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H
@@ -287,12 +298,9 @@
 
         <!-- QR Code Section -->
         <div class="qr-container">
-            <p>Scan to view</p>
+            <p>Scan to View</p>
             <div id="qrcode"></div>
-            <p>
-                <a href="https://pratikabhang.netlify.app/" target="_blank"></a>
-            </p>
-            <button onclick="copyLink()">Copy Link</button>
+            <button onclick="copyLink()">Copy QR Link</button>
         </div>
 
     </div>
