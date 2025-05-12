@@ -70,18 +70,26 @@
             margin-bottom: 1rem;
         }
 
-        .qr-container button {
+        .qr-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
             margin-top: 1rem;
-            padding: 0.7rem 1.5rem;
+        }
+
+        .qr-container button {
+            padding: 0.7rem 1rem;
             background-color: wheat;
             color: black;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.3s ease;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 120px;
         }
 
         .qr-container button:hover {
@@ -128,10 +136,23 @@
         function copyLink() {
             const link = "https://pratikabhang.netlify.app/";
             navigator.clipboard.writeText(link).then(() => {
-                showToast("Portfolio link copied to clipboard!");
+                showToast("Link copied!");
             }, () => {
                 showToast("Failed to copy the link");
             });
+        }
+
+        function downloadQR() {
+            const canvas = document.querySelector("#qrcode canvas");
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'pratikabhang-qrcode.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showToast("QR Code downloaded!");
+            } else {
+                showToast("Failed to download QR Code");
+            }
         }
 
         // Generate QR code when page loads
@@ -300,7 +321,10 @@
         <div class="qr-container">
             <p>Scan to View</p>
             <div id="qrcode"></div>
-            <button onclick="copyLink()">Copy QR Link</button>
+            <div class="qr-buttons">
+                <button onclick="copyLink()">Copy Link</button>
+                <button onclick="downloadQR()">Download</button>
+            </div>
         </div>
 
     </div>
