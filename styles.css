@@ -112,15 +112,19 @@ body {
     0% {
         transform: rotate(0deg);
     }
+
     25% {
         transform: rotate(-10deg);
     }
+
     50% {
         transform: rotate(10deg);
     }
+
     75% {
         transform: rotate(-10deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -238,6 +242,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -249,19 +254,19 @@ body {
     .profile h1 {
         font-size: 2.5rem;
     }
-    
+
     .profile p {
         font-size: 1.2rem;
     }
-    
+
     .social-link {
         padding: 1rem 1.5rem;
     }
-    
+
     .social-link i {
         font-size: 1.8rem;
     }
-    
+
     .social-link span {
         font-size: 1.2rem;
     }
@@ -271,24 +276,24 @@ body {
     body {
         padding: 1rem;
     }
-    
+
     .profile h1 {
         font-size: 2rem;
     }
-    
+
     .social-link {
         padding: 0.8rem 1rem;
     }
-    
+
     .social-link i {
         font-size: 1.5rem;
         margin-right: 0.8rem;
     }
-    
+
     .social-link span {
         font-size: 1rem;
     }
-    
+
     .share-icon {
         font-size: 1.2rem;
     }

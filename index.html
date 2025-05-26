@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-    
+
     <!-- QR Code library -->
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    
+
     <style>
         /* Toast Notification Styles */
         .toast {
@@ -155,23 +155,23 @@
             }
         }
 
-          // Disable Ctrl + '+' or Ctrl + '-' keys for zoom on desktop
-window.addEventListener('keydown', function(e) {
-  if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
-    e.preventDefault();
-  }
-});
+        // Disable Ctrl + '+' or Ctrl + '-' keys for zoom on desktop
+        window.addEventListener('keydown', function (e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
+                e.preventDefault();
+            }
+        });
 
-// Disable zoom via mouse wheel + Ctrl on desktop
-window.addEventListener('wheel', function(e) {
-  if (e.ctrlKey) {
-    e.preventDefault();
-  }
-}, { passive: false });
+        // Disable zoom via mouse wheel + Ctrl on desktop
+        window.addEventListener('wheel', function (e) {
+            if (e.ctrlKey) {
+                e.preventDefault();
+            }
+        }, { passive: false });
 
 
         // Generate QR code when page loads
-        window.onload = function() {
+        window.onload = function () {
             // Create QR code for the portfolio link
             new QRCode(document.getElementById("qrcode"), {
                 text: "https://pratikabhang.netlify.app/",
@@ -243,7 +243,7 @@ window.addEventListener('wheel', function(e) {
                     onclick="copyToClipboard(event, 'https://reddit.com/pratikabhang')"></i>
             </div>
 
-                        <!-- Portfolio -->
+            <!-- Portfolio -->
             <div class="social-link portfolio" onclick="openUrl('https://pratikabhang.vercel.app/')">
                 <i class="fas fa-briefcase"></i>
                 <span>Portfolio</span>
@@ -292,29 +292,31 @@ window.addEventListener('wheel', function(e) {
             </div>
 
             <!-- Coding Ninja -->
-            <div class="social-link codingninja" onclick="openUrl('https://www.naukri.com/code360/profile/pratikabhang')">
+            <div class="social-link codingninja"
+                onclick="openUrl('https://www.naukri.com/code360/profile/pratikabhang')">
                 <i class="fas fa-user-ninja"></i>
                 <span>Coding Ninja</span>
                 <i class="fa-solid fa-handshake share-icon"
                     onclick="copyToClipboard(event, 'https://www.naukri.com/code360/profile/pratikabhang')"></i>
             </div>
-            
+
             <!-- GeeksforGeeks -->
-            <div class="social-link geeksforgeeks" onclick="openUrl('https://www.geeksforgeeks.org/user/pratikabhang/')">
+            <div class="social-link geeksforgeeks"
+                onclick="openUrl('https://www.geeksforgeeks.org/user/pratikabhang/')">
                 <i class="fa-solid fa-book"></i>
                 <span>GeeksforGeeks</span>
                 <i class="fa-solid fa-handshake share-icon"
                     onclick="copyToClipboard(event, 'https://www.geeksforgeeks.org/user/pratikabhang/')"></i>
             </div>
 
-             <!-- Behance -->
+            <!-- Behance -->
             <div class="social-link behance" onclick="openUrl('https://www.behance.net/pratikabhang ')">
                 <i class="fa-brands fa-behance"></i>
                 <span>Behance</span>
                 <i class="fa-solid fa-handshake share-icon"
                     onclick="copyToClipboard(event, 'https://www.behance.net/pratikabhang')"></i>
             </div>
-            
+
             <!-- Codolio -->
             <div class="social-link codolio" onclick="openUrl('https://codolio.com/profile/pratikabhang')">
                 <i class="fas fa-code"></i>
