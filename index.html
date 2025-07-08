@@ -17,172 +17,6 @@
 
     <!-- QR Code library -->
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-
-    <style>
-        /* Toast Notification Styles */
-        .toast {
-            visibility: hidden;
-            min-width: 250px;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 5px;
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .toast.show {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /* QR Code Container Styles */
-        .qr-container {
-            margin: 2rem auto;
-            padding: 1.5rem;
-            text-align: center;
-            background-color: #f8f9fa;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 280px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .qr-container p {
-            margin-bottom: 1rem;
-            font-weight: 600;
-            color: #333;
-            font-size: 1.1rem;
-        }
-
-        #qrcode {
-            display: inline-block;
-            padding: 10px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1rem;
-        }
-
-        .qr-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 1rem;
-        }
-
-        .qr-container button {
-            padding: 0.7rem 1rem;
-            background-color: wheat;
-            color: black;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            max-width: 120px;
-        }
-
-        .qr-container button:hover {
-            background-color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .qr-container button:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-
-    <script>
-        // Function to open a URL in a new tab
-        function openUrl(url) {
-            window.open(url, '_blank');
-        }
-
-        // Function to copy text to clipboard and show a toast message
-        function copyToClipboard(event, text) {
-            event.stopPropagation(); // Prevent parent click event
-
-            navigator.clipboard.writeText(text).then(() => {
-                showToast("Link copied to clipboard!");
-            }).catch(err => {
-                console.error('Copy failed:', err);
-                showToast("Failed to copy link");
-            });
-        }
-
-        // Function to show a toast message
-        function showToast(message) {
-            const toast = document.getElementById("toast");
-            toast.innerText = message;
-            toast.classList.add("show");
-
-            setTimeout(() => {
-                toast.classList.remove("show");
-            }, 2000);
-        }
-
-        function copyLink() {
-            const link = "https://pratikabhang.netlify.app/";
-            navigator.clipboard.writeText(link).then(() => {
-                showToast("Link copied!");
-            }, () => {
-                showToast("Failed to copy the link");
-            });
-        }
-
-        function downloadQR() {
-            const canvas = document.querySelector("#qrcode canvas");
-            if (canvas) {
-                const link = document.createElement('a');
-                link.download = 'pratikabhang-qrcode.png';
-                link.href = canvas.toDataURL('image/png');
-                link.click();
-                showToast("QR Code downloaded!");
-            } else {
-                showToast("Failed to download QR Code");
-            }
-        }
-
-        // Disable Ctrl + '+' or Ctrl + '-' keys for zoom on desktop
-        window.addEventListener('keydown', function (e) {
-            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
-                e.preventDefault();
-            }
-        });
-
-        // Disable zoom via mouse wheel + Ctrl on desktop
-        window.addEventListener('wheel', function (e) {
-            if (e.ctrlKey) {
-                e.preventDefault();
-            }
-        }, { passive: false });
-
-
-        // Generate QR code when page loads
-        window.onload = function () {
-            // Create QR code for the portfolio link
-            new QRCode(document.getElementById("qrcode"), {
-                text: "https://pratikabhang.netlify.app/",
-                width: 160,
-                height: 160,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
-        };
-    </script>
 </head>
 
 <body>
@@ -195,6 +29,14 @@
 
         <!-- Social Links Section -->
         <div class="links">
+            <!-- Portfolio -->
+            <div class="social-link portfolio" onclick="openUrl('https://pratikabhang.vercel.app/')">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://pratikabhang.vercel.app/')"></i>
+            </div>
+
             <!-- Instagram -->
             <div class="social-link instagram" onclick="openUrl('https://www.instagram.com/pratikabhang1')">
                 <i class="fab fa-instagram"></i>
@@ -209,6 +51,14 @@
                 <span>X (Twitter)</span>
                 <i class="fa-solid fa-handshake share-icon"
                     onclick="copyToClipboard(event, 'https://twitter.com/pratikabhang11')"></i>
+            </div>
+
+            <!-- YouTube -->
+            <div class="social-link youtube" onclick="openUrl('https://www.youtube.com/@pratikabhang')">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+                <i class="fa-solid fa-handshake share-icon"
+                    onclick="copyToClipboard(event, 'https://www.youtube.com/@pratikabhang')"></i>
             </div>
 
             <!-- LinkedIn -->
@@ -243,28 +93,12 @@
                     onclick="copyToClipboard(event, 'https://reddit.com/pratikabhang')"></i>
             </div>
 
-            <!-- Portfolio -->
-            <div class="social-link portfolio" onclick="openUrl('https://pratikabhang.vercel.app/')">
-                <i class="fas fa-briefcase"></i>
-                <span>Portfolio</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="copyToClipboard(event, 'https://pratikabhang.vercel.app/')"></i>
-            </div>
-
             <!-- Pinterest -->
             <div class="social-link pinterest" onclick="openUrl('https://pinterest.com/pratikabhang11')">
                 <i class="fab fa-pinterest"></i>
                 <span>Pinterest</span>
                 <i class="fa-solid fa-handshake share-icon"
                     onclick="copyToClipboard(event, 'https://pinterest.com/pratikabhang11')"></i>
-            </div>
-
-            <!-- YouTube -->
-            <div class="social-link youtube" onclick="openUrl('https://www.youtube.com/@pratikabhang')">
-                <i class="fab fa-youtube"></i>
-                <span>YouTube</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="copyToClipboard(event, 'https://www.youtube.com/@pratikabhang')"></i>
             </div>
 
             <!-- HackerRank -->
@@ -317,14 +151,6 @@
                     onclick="copyToClipboard(event, 'https://www.behance.net/pratikabhang')"></i>
             </div>
 
-            <!-- Codolio -->
-            <div class="social-link codolio" onclick="openUrl('https://codolio.com/profile/pratikabhang')">
-                <i class="fas fa-code"></i>
-                <span>Codolio</span>
-                <i class="fa-solid fa-handshake share-icon"
-                    onclick="copyToClipboard(event, 'https://codolio.com/profile/pratikabhang')"></i>
-            </div>
-
             <!-- Email -->
             <div class="social-link email" onclick="openUrl('mailto:work.pratikabhang@gmail.com')">
                 <i class="fas fa-envelope"></i>
@@ -337,6 +163,9 @@
 
     <!-- Toast Notification -->
     <div id="toast" class="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>

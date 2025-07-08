@@ -221,19 +221,98 @@ body {
     color: black;
 }
 
-.social-link.interviewbit {
-    background: #0d47a1;
-    color: white;
-}
-
 .social-link.portfolio {
-    background: #1c1e21;
-    color: white;
+    background: rgb(255, 255, 190);
+    color: brown;
 }
 
 .social-link.email {
-    background: rgb(255, 255, 190);
-    color: red;
+    background: rgb(152, 29, 29);
+    color: rgb(255, 255, 255);
+}
+
+/* Toast Notification Styles */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* QR Code Container Styles */
+.qr-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qr-container p {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+#qrcode {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.qr-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.qr-container button {
+    padding: 0.7rem 1rem;
+    background-color: wheat;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 120px;
+}
+
+.qr-container button:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.qr-container button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Fade-in Animation */
