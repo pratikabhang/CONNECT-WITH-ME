@@ -196,19 +196,9 @@ body {
     color: white;
 }
 
-.social-link.figma {
-    background: #a259ff;
-    color: white;
-}
-
 .social-link.geeksforgeeks {
     background: #2F8D46;
     color: white;
-}
-
-.social-link.codolio {
-    background: lightsalmon;
-    color: black;
 }
 
 .social-link.behance {
@@ -227,8 +217,8 @@ body {
 }
 
 .social-link.email {
-    background: rgb(152, 29, 29);
-    color: rgb(255, 255, 255);
+    background: lightsalmon;
+    color: black;
 }
 
 /* Toast Notification Styles */
