@@ -212,8 +212,8 @@ body {
 }
 
 .social-link.portfolio {
-    background: rgb(255, 255, 190);
-    color: brown;
+    background: rgb(108, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .social-link.email {
