@@ -217,11 +217,11 @@ body {
 }
 
 .social-link.email {
-    background: lightsalmon;
+    background: rgb(255, 218, 51);
     color: black;
 }
 .social-link.figma {
-    background: #0ACF83;
+    background: #e86950;
     color: black;
 }
 
