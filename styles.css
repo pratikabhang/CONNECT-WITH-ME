@@ -220,6 +220,11 @@ body {
     background: lightsalmon;
     color: black;
 }
+.social-link.figma {
+    background: #0ACF83;
+    color: black;
+}
+
 
 /* Toast Notification Styles */
 .toast {
