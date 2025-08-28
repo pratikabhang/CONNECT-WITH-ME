@@ -63,6 +63,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.15rem;
+    margin-bottom: 2rem;
 }
 
 /* Social Link Styles */
@@ -202,7 +203,7 @@ body {
 }
 
 .social-link.behance {
-    background: blue;
+    background: #1769ff;
     color: white;
 }
 
@@ -220,11 +221,36 @@ body {
     background: rgb(255, 218, 51);
     color: black;
 }
+
 .social-link.figma {
     background: #e86950;
     color: black;
 }
 
+.social-link.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.social-link.telegram {
+    background: #0088cc;
+    color: white;
+}
+
+.social-link.interviewbit {
+    background: #6c27b3;
+    color: white;
+}
+
+.social-link.credly {
+    background: #FF6B35;
+    color: white;
+}
+
+.social-link.orcid {
+    background: #A6CE39;
+    color: white;
+}
 
 /* Toast Notification Styles */
 .toast {
