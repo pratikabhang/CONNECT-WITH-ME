@@ -106,11 +106,25 @@ body {
 }
 
 @keyframes handshake {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-10deg); }
-    50% { transform: rotate(10deg); }
-    75% { transform: rotate(-10deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 /* Hover effects */
@@ -214,6 +228,47 @@ body {
     color: white;
 }
 
+/* New platform colors */
+.social-link.twitch {
+    background: #9146FF;
+    color: white;
+}
+
+.social-link.tumblr {
+    background: #001935;
+    color: white;
+}
+
+.social-link.discord {
+    background: #5865F2;
+    color: white;
+}
+
+.social-link.imdb {
+    background: #F5C518;
+    color: black;
+}
+
+.social-link.dailyhunt {
+    background: #FF6B00;
+    color: white;
+}
+
+.social-link.unstop {
+    background: #00A8FF;
+    color: white;
+}
+
+.social-link.naukri {
+    background: #0073B1;
+    color: white;
+}
+
+.social-link.interview360 {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+}
+
 /* Toast notification styling */
 .toast {
     visibility: hidden;
@@ -243,6 +298,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -254,15 +310,19 @@ body {
     .profile h1 {
         font-size: 2.5rem;
     }
+
     .profile p {
         font-size: 1.2rem;
     }
+
     .social-link {
         padding: 1rem 1.5rem;
     }
+
     .social-link i {
         font-size: 1.8rem;
     }
+
     .social-link span {
         font-size: 1.2rem;
     }
@@ -272,19 +332,24 @@ body {
     body {
         padding: 1rem;
     }
+
     .profile h1 {
         font-size: 2rem;
     }
+
     .social-link {
         padding: 0.8rem 1rem;
     }
+
     .social-link i {
         font-size: 1.5rem;
         margin-right: 0.8rem;
     }
+
     .social-link span {
         font-size: 1rem;
     }
+
     .share-icon {
         font-size: 1.2rem;
     }
