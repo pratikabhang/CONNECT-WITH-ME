@@ -138,104 +138,13 @@ body {
 }
 
 /* Platform-specific colors */
-.social-link.instagram {
-    background: linear-gradient(45deg, #ff0099, #ff4f70, #ff7847, #ffa726, #ffd800);
+.social-link.behance {
+    background: #0057FF;
     color: white;
 }
 
-.social-link.linkedin {
-    background: #008dd8;
-    color: white;
-}
-
-.social-link.github {
-    background: #212121;
-    color: white;
-}
-
-.social-link.threads {
-    background: #000;
-    color: white;
-}
-
-.social-link.x {
-    background: #000;
-    color: white;
-}
-
-.social-link.youtube {
-    background: #ff0000;
-    color: white;
-}
-
-.social-link.snapchat {
-    background: #fffc00;
-    color: black;
-}
-
-.social-link.pinterest {
-    background: #e60023;
-    color: white;
-}
-
-.social-link.reddit {
-    background: #ff4500;
-    color: black;
-}
-
-.social-link.hackerrank {
-    background: #149e47;
-    color: black;
-}
-
-.social-link.leetcode {
-    background: #f89f1b;
-    color: black;
-}
-
-.social-link.codechef {
-    background: #5b4638;
-    color: white;
-}
-
-.social-link.portfolio {
-    background: rgb(108, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
-.social-link.email {
-    background: rgb(255, 218, 51);
-    color: black;
-}
-
-.social-link.whatsapp {
-    background: #25D366;
-    color: white;
-}
-
-.social-link.telegram {
-    background: #0088cc;
-    color: white;
-}
-
-.social-link.credly {
-    background: #FF6B35;
-    color: white;
-}
-
-.social-link.orcid {
-    background: #A6CE39;
-    color: white;
-}
-
-/* New platform colors */
-.social-link.twitch {
-    background: #9146FF;
-    color: white;
-}
-
-.social-link.tumblr {
-    background: #001935;
+.social-link.dailyhunt {
+    background: linear-gradient(45deg, #FF6B00, #FF8C00);
     color: white;
 }
 
@@ -244,28 +153,128 @@ body {
     color: white;
 }
 
-.social-link.imdb {
-    background: #F5C518;
+.social-link.freepik {
+    background: linear-gradient(45deg, #1A73E8, #34A853);
+    color: white;
+}
+
+.social-link.github {
+    background: #24292E;
+    color: white;
+}
+
+.social-link.heylink {
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    color: white;
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    color: white;
+}
+
+.social-link.linkedin {
+    background: #0A66C2;
+    color: white;
+}
+
+.social-link.linkplease {
+    background: linear-gradient(45deg, #8B5CF6, #6366F1);
+    color: white;
+}
+
+.social-link.orcid {
+    background: #A6CE39;
+    color: white;
+}
+
+.social-link.pinterest {
+    background: #E60023;
+    color: white;
+}
+
+.social-link.portfolio {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    color: white;
+}
+
+.social-link.reddit {
+    background: #FF4500;
+    color: white;
+}
+
+.social-link.snapchat {
+    background: #FFFC00;
     color: black;
 }
 
-.social-link.dailyhunt {
-    background: #FF6B00;
+.social-link.telegram {
+    background: #0088CC;
     color: white;
 }
 
-.social-link.unstop {
-    background: #00A8FF;
+.social-link.threads {
+    background: #000000;
     color: white;
 }
 
-.social-link.naukri {
-    background: #0073B1;
+.social-link.tumblr {
+    background: #001935;
     color: white;
 }
 
-.social-link.interview360 {
-    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+.social-link.twitch {
+    background: #9146FF;
+    color: white;
+}
+
+.social-link.vecteezy {
+    background: linear-gradient(45deg, #00A8FF, #0097E6);
+    color: white;
+}
+
+.social-link.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.social-link.x {
+    background: #000000;
+    color: white;
+}
+
+.social-link.youtube-studio {
+    background: linear-gradient(45deg, #FF0000, #CC0000);
+    color: white;
+}
+
+.social-link.portfolio-original {
+    background: linear-gradient(45deg, #000000, #333333);
+    color: white;
+}
+
+.social-link.instagram-profile {
+    background: linear-gradient(45deg, #833AB4, #C13584, #E1306C);
+    color: white;
+}
+
+.social-link.x-profile {
+    background: linear-gradient(45deg, #000000, #1DA1F2);
+    color: white;
+}
+
+.social-link.youtube-channel {
+    background: linear-gradient(45deg, #FF0000, #282828);
+    color: white;
+}
+
+.social-link.linkedin-profile {
+    background: linear-gradient(45deg, #0A66C2, #004182);
+    color: white;
+}
+
+.social-link.github-profile {
+    background: linear-gradient(45deg, #24292E, #2F363D);
     color: white;
 }
 
