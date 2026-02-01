@@ -135,18 +135,8 @@ body {
     color: white;
 }
 
-.social-link.dailyhunt {
-    background: #FF5722;
-    color: white;
-}
-
 .social-link.dailymotion {
     background: #0066DC;
-    color: white;
-}
-
-.social-link.devto {
-    background: #0A0A0A;
     color: white;
 }
 
@@ -158,16 +148,6 @@ body {
 .social-link.email {
     background: rgb(255, 218, 51);
     color: black;
-}
-
-.social-link.figma {
-    background: #F24E1E;
-    color: white;
-}
-
-.social-link.freepik {
-    background: #0BB783;
-    color: white;
 }
 
 .social-link.geeksforgeeks {
@@ -182,11 +162,6 @@ body {
 
 .social-link.hackerrank {
     background: #149e47;
-    color: white;
-}
-
-.social-link.heylink {
-    background: #8B5CF6;
     color: white;
 }
 
@@ -205,11 +180,6 @@ body {
     color: black;
 }
 
-.social-link.linkplease {
-    background: #3B82F6;
-    color: white;
-}
-
 .social-link.linkedin {
     background: #008dd8;
     color: white;
@@ -223,16 +193,6 @@ body {
 .social-link.naukri-code360 {
     background: darkgoldenrod;
     color: white;
-}
-
-.social-link.netlify {
-    background: #32E6E2;
-    color: black;
-}
-
-.social-link.orcid {
-    background: #A6CE39;
-    color: black;
 }
 
 .social-link.pinterest {
@@ -260,11 +220,6 @@ body {
     color: white;
 }
 
-.social-link.telegram-web {
-    background: #26A5E4;
-    color: white;
-}
-
 .social-link.threads {
     background: #000;
     color: white;
@@ -280,22 +235,7 @@ body {
     color: white;
 }
 
-.social-link.unstop {
-    background: #00A8FF;
-    color: white;
-}
-
-.social-link.vecteezy {
-    background: #00B4FF;
-    color: white;
-}
-
 .social-link.whatsapp {
-    background: #25D366;
-    color: white;
-}
-
-.social-link.whatsapp-web {
     background: #25D366;
     color: white;
 }
@@ -307,11 +247,6 @@ body {
 
 .social-link.youtube {
     background: #ff0000;
-    color: white;
-}
-
-.social-link.youtube-studio {
-    background: #FF0000;
     color: white;
 }
 
