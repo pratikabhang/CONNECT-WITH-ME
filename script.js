@@ -21,12 +21,14 @@ function showToast(message) {
     }, 2000);
 }
 
+// Prevent zooming with keyboard shortcuts
 window.addEventListener('keydown', function (e) {
     if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
         e.preventDefault();
     }
 });
 
+// Prevent zooming with Ctrl + scroll
 window.addEventListener('wheel', function (e) {
     if (e.ctrlKey) {
         e.preventDefault();
