@@ -196,10 +196,6 @@ Check the repository for a `LICENSE` file before redistributing or modifying the
 **Pratik Abhang**
 
 - 🌐 **Website:** [pratikabhang.netlify.app](https://pratikabhang.netlify.app/)
-- 💼 **LinkedIn:** [linkedin.com/in/pratikabhang](https://www.linkedin.com/in/pratikabhang)
-- 💻 **GitHub:** [github.com/pratikabhang](https://github.com/pratikabhang)
-- 📸 **Instagram:** [@pratikabhang1](https://www.instagram.com/pratikabhang1)
-- ▶️ **YouTube:** [@pratikabhang2003](https://www.youtube.com/@pratikabhang2003)
 
 Explore the live website for additional social and developer profile links.
 
